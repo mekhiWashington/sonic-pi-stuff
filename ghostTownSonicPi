@@ -1,7 +1,11 @@
 use_bpm 83
 use_synth :piano
 
+
 notkanye = "C:/Users/mekhi_washington/Downloads/Kanye West - I Guess Well Never Know (Grammys Speech).mp3"
+
+
+print(sample_duration notkanye)
 
 define :measure1 do
   in_thread do
@@ -166,5 +170,22 @@ live_loop :piano do
   measure4
   sleep 4
 end
+
 sleep 3
+
+live_loop :octavePiano do
+  with_fx :ping_pong do
+    measure1
+    sleep 4
+    measure2
+    sleep 4
+    measure3
+    sleep 4
+    measure4
+    sleep 4
+  end
+end
+
+sleep 16
+
 sample notkanye, amp: 4
