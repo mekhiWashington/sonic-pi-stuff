@@ -6,7 +6,7 @@ notkanye = "C:/Users/mekhi_washington/Downloads/Kanye West - I Guess Well Never 
 keepPlaying = true
 
 print(sample_duration notkanye)
-=begin
+#=begin
 define :measure1 do
   in_thread do
     # Right Hand
@@ -203,7 +203,7 @@ sleep 16
 keepPlaying = false
 
 sleep 8
-=end
+#=end
 s = 0
 f = 0.25
 a = 0
@@ -222,3 +222,4 @@ use_bpm 80
   play :e6
   sleep 2
 end
+
