@@ -2,10 +2,10 @@ use_bpm 83
 use_synth :piano
 
 
-#notkanye = "C:/Users/mekhi_washington/Downloads/Kanye West - I Guess Well Never Know (Grammys Speech).mp3"
+notkanye = "C:/Users/mekhi_washington/Downloads/Kanye West - I Guess Well Never Know (Grammys Speech).mp3"
 keepPlaying = true
 
-#print(sample_duration notkanye)
+print(sample_duration notkanye)
 #=begin
 define :measure1 do
   in_thread do
@@ -208,17 +208,17 @@ s = 0
 f = 0.25
 a = 0
 
-#4.times do
-#sample notkanye, start: s, finish: f, amp: a
-#sleep 19.11/4
-#s += 0.25
-#f += 0.25
-#a += 0.5
-#end
+4.times do
+  sample notkanye, start: s, finish: f, amp: a
+  sleep 19.11/4
+  s += 0.25
+  f += 0.25
+  a += 0.5
+end
 
 use_bpm 80
 
-15.times do
+13.times do
   play :e6
   sleep 2
 end
