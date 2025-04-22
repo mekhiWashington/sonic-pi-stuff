@@ -4,6 +4,7 @@ use_bpm 80
 # Set initial values
 set :playing, true
 amp = 1
+AdLib = "C:/Users/mekhi_washington/Downloads/LOOKATYA.wav"
 
 with_fx :reverb do
   with_fx :level, amp: amp do |lvl|
@@ -14,8 +15,7 @@ with_fx :reverb do
     riff3 = [:e3, :db3, :e3, :ab3]
     riff4 = [:a3, :e3, :db3, :e3]
     
-    # Sample (optional)
-    #AdLib = "C:/Users/mekhi_washington/Downloads/LOOKATYA.wav"
+    
     
     define :intro do |note|
       3.times do
@@ -54,6 +54,8 @@ with_fx :reverb do
     sleep 0.5
     play :e6
     sleep 0.5
+    
+    sample AdLib, finish: 0.5
     
     # --- Bass Loop ---
     live_loop :bass do
@@ -116,15 +118,7 @@ with_fx :reverb do
     end
     
     control lvl, amp: 0
-    
-    sleep 0.1
-    
-    control lvl, amp: 1
-    
-    3.times do
-      play :e3
-      sleep 1
-    end
-    
   end
+  
+  sample "C:/Users/mekhi_washington/Downloads/metalpipe.mp3", amp: 4
 end
